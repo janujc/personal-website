@@ -1,4 +1,5 @@
 {
+  "repositoryUrl": "https://github.com/janujc/personal-website",
   "branches": ["main"],
   "tagFormat": "v${version}"
 }
