@@ -1,5 +1,10 @@
 {
   "repositoryUrl": "https://github.com/janujc/personal-website.git",
   "branches": ["main"],
-  "tagFormat": "v${version}"
+  "tagFormat": "v${version}",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/github"
+  ]
 }
