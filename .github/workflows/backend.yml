@@ -22,7 +22,7 @@ jobs:
           python -m py_compile app/main.py
           pytest -q
 
-  build:
+  package:
     needs: test
     runs-on: ubuntu-latest
     defaults:
@@ -34,7 +34,7 @@ jobs:
         run: docker build -t personal-website-backend .
 
   release:
-    needs: build
+    needs: package
     if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
     runs-on: ubuntu-latest
     steps:
