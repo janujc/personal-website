@@ -1,4 +1,7 @@
+black
 fastapi
-uvicorn
+pre-commit
 pytest
+pytest-cov
 requests
+uvicorn
