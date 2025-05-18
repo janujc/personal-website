@@ -25,3 +25,35 @@ pytest -q
 cd BE
 docker build -t personal-website-backend .
 ```
+
+## Frontend
+
+A basic React app lives in the `FE` directory.
+
+### Installing dependencies
+
+```zsh
+cd FE
+npm install
+```
+
+### Running the development server
+
+```zsh
+cd FE
+npm start
+```
+
+### Running tests
+
+```zsh
+cd FE
+npm test -- --watchAll=false
+```
+
+### Building the app
+
+```zsh
+cd FE
+npm run build
+```
