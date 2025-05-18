@@ -1,0 +1,27 @@
+name: Backend CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: BE
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest
+      - name: Lint and test
+        run: |
+          python -m py_compile app/main.py
+          pytest -q
+      - name: Build Docker image
+        run: |
+          docker build -t personal-website-backend .
+
