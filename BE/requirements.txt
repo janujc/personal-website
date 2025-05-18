@@ -3,4 +3,3 @@ uvicorn
 pytest
 pytest-cov
 requests
-pre-commit
