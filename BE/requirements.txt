@@ -3,3 +3,4 @@ uvicorn
 pytest
 requests
 pre-commit
+black
