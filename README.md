@@ -1,5 +1,17 @@
 # personal-website
 
+## Pre-Commit Hooks
+
+The repository uses [pre-commit](https://pre-commit.com/) to run formatting
+checks. with [Black](https://black.readthedocs.io/). After installing the
+dependencies listed in `BE/requirements.txt`, install the git hooks and run
+them:
+
+```zsh
+pre-commit install
+pre-commit run --all-files
+```
+
 ## Backend
 
 This repository now includes a minimal FastAPI backend located in the `BE` directory.
@@ -41,14 +53,34 @@ cd BE
 docker build -t personal-website-backend .
 ```
 
-### Setting up pre-commit
+## Frontend
 
-The repository uses [pre-commit](https://pre-commit.com/) to run formatting
-checks with [Black](https://black.readthedocs.io/). After installing the
-dependencies listed in `BE/requirements.txt`, install the git hooks and run
-them:
+A basic React app lives in the `FE` directory.
+
+### Installing dependencies
 
 ```zsh
-pre-commit install
-pre-commit run --all-files
+cd FE
+npm install
+```
+
+### Running the development server
+
+```zsh
+cd FE
+npm start
+```
+
+### Running tests
+
+```zsh
+cd FE
+npm test -- --watchAll=false
+```
+
+### Building the app
+
+```zsh
+cd FE
+npm run build
 ```
