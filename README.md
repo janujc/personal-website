@@ -13,7 +13,17 @@ environment:
 cd BE
 python -m venv .venv
 source .venv/bin/activate
+```
+
+Install dependencies
+
+```zsh
 pip install -r requirements.txt
+```
+
+Run the development server
+
+```zsh
 uvicorn app.main:app --reload
 ```
 
@@ -41,5 +51,3 @@ formatting checks. After installing the dependencies listed in
 pre-commit install
 pre-commit run --all-files
 ```
-
-
