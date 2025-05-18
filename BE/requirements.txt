@@ -1,6 +1,7 @@
-fastapi
-uvicorn
-pytest
-requests
-pre-commit
 black
+fastapi
+pre-commit
+pytest
+pytest-cov
+requests
+uvicorn
