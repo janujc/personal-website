@@ -3,7 +3,7 @@
 ## Pre-Commit Hooks
 
 The repository uses [pre-commit](https://pre-commit.com/) to run formatting
-checks. with [Black](https://black.readthedocs.io/). After installing the
+checks with [Black](https://black.readthedocs.io/). After installing the
 dependencies listed in `BE/requirements.txt`, install the git hooks and run
 them:
 
